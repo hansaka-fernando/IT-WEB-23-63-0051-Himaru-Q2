@@ -1,0 +1,19 @@
+A.Get all the information of all students
+
+SELECT * FROM students;
+
+B.Select student ID, name, and city from students who are from 'Kandy'
+
+SELECT studentid, name, city FROM students WHERE city = 'Kandy';.
+
+C.Update the city as 'Galle' of the student whose ID equals 4
+
+UPDATE students SET city = 'Galle' WHERE studentid = 4;
+
+D.Get all theinformation of all  students with their coursenames. 
+
+SELECT s.*, c.course_name
+FROM students s
+JOIN student_courses sc ON s.studentid = sc.studentid
+JOIN courses c ON sc.courseid = c.courseid;
+
